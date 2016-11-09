@@ -1,0 +1,189 @@
+//
+//  YSYX-Prefix.pch
+
+//
+//  Created by 石虎 on 16/5/4.
+//  Copyright © 2016年 shih. All rights reserved.
+//
+
+#ifndef YSYX_Prefix_pch
+#define YSYX_Prefix_pch
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+#pragma mark - -------------------------分类工具类-------------------------
+
+#import "UIImage+Image.h"//分类
+#import "NSString+File.h"
+#import "UIImage+Fit.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIWindow+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIImage+NJ.h"//图片裁剪
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIViewController+TableView.h"
+#import "MBProgressHUD+MJ.h"
+#import "UIImage+Extension.h"
+#import "UITextField+LimitLength.h"
+#import "UIButton+Extension.h"
+#import "NSString+Extension.h"
+#import "GTMBase64.h"
+#import "SHCommonMethod.h"//共同方法
+
+
+
+#pragma mark - -------------------------第三方-------------------------
+#import <Masonry.h>//第三方
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "ProgressHUD.h"
+#import <MJExtension.h>
+#import "MJRefresh.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "AFNetworking.h"
+#import "AFURLRequestSerialization.h"
+#import <IQKeyboardManager.h>
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>//向右滑动手势返回上一个界面
+#import "LeftSlideViewController.h"//侧滑
+#import "ZYQAssetPickerController.h"
+
+
+#pragma mark - -------------------------类名-------------------------
+#import "SHTableViewController.h"
+#import "SHNavigationController.h"
+
+
+
+#pragma mark - -------------------------常用宏-------------------------
+
+
+//保存本地
+#define SHSaveLocal(key,value)  [[NSUserDefaults standardUserDefaults] setObject:value forKey:key]
+//取
+#define SHGetLocalData(key)  [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+//手机号
+#define SH_IPONE_Nnumber  ([[NSUserDefaults standardUserDefaults] objectForKey:@"userPhone"]?[[NSUserDefaults standardUserDefaults] objectForKey:@"userPhone"]:@"")
+//登陆 token
+#define SH_Get_Token ([[NSUserDefaults standardUserDefaults] objectForKey:@"token"]?[[NSUserDefaults standardUserDefaults] objectForKey:@"token"]:@"")
+
+//登陆 token-2
+#define SHSave_GET_Token                   [[SHSaveToken accountToken ]token]
+
+
+
+// 加载 cell XIB
+#define SHLoadNibNamed(NiB)   [[[NSBundle mainBundle]loadNibNamed:NiB owner:nil options:nil]lastObject]
+//加载 view XIB
+#define SHLoadNibView [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].lastObject
+#define ImageNamed(_pointer)                [UIImage imageNamed:_pointer]
+
+
+
+//屏幕高度
+#define SHNAV_BarH  64
+#define SHCGRectMake(x, y, w, h)             CGRectMake(x, y, w, h)
+#define KMainScreenH [UIScreen mainScreen].bounds.size.height
+#define Rect(x, y, w, h)  CGRectMake(x, y, w, h)
+
+//字体
+#define SHFont_12   [UIFont systemFontOfSize:12.f]
+#define SHFont_15   [UIFont systemFontOfSize:15.f]
+#define SHFont_18   [UIFont systemFontOfSize:18.f]
+
+
+//常用宏定义·
+#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define kDeviceScale [UIScreen mainScreen].scale
+#define kDeviceWidthPoint (kDeviceWidth * kDeviceScale)
+#define KDeviceHeight [[[UIDevice currentDevice] systemVersion] floatValue] < 7.0?[UIScreen mainScreen].bounds.size.height - 20 : [UIScreen mainScreen].bounds.size.height
+#define RATE kDeviceWidth / 375.0
+
+#define isIOS8OrAbove [UIDevice currentDevice].systemVersion.floatValue >= 8.0
+
+
+/**	rgba颜色 */
+#define SHTextColor RGB(67, 172, 67)//导航栏蓝色
+#define SHLineColor RGB(236,236,236) //Line颜色
+#define SHRedColor RGB(242, 91, 75)
+
+#define kImgLogoWidth 20
+#define kStartDayNum 3
+
+#define YSYXErrorText @"网络请求失败"
+#define YSYXIsExistNetwork @"www.baidu.com"
+#define WEAKSELF  typeof(self) __weak weakSelf=self;
+
+#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define WWMMakeSolodColorImage(color, size) [YQConfig solidColorImageWithColor:color andSize:size]
+
+
+/**	从16进制颜色值转换为UIColor */
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+// 随机色
+#define YSYXRandomColor HMColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+//轮播图
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UIColorFromAlphaRGB(rgbValue,a) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+
+/** 通知 */
+#define SHNoticDefaultCenter           [NSNotificationCenter defaultCenter]
+
+
+
+/** iPhone 的机型判断*/
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+/**iOS 版本   */
+#define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define iOS9 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define iOS71s ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.1)
+#define kNetworkStatusWiFi ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi)
+#define kNetworkStatus3G ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN)
+
+
+/** */
+#define RONGCLOUD_IM_APPKEY @"uwd1c0sxdogk1"
+#define APPVERSION [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+
+#endif
+
+// 6.自定义Log
+/** debug 调试*/
+#ifdef DEBUG // 调试状态, 打开LOG功能  pvxdm17jxalwr
+#define SHLog(...) NSLog(@"%s %d \n %@ \n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else // 发布状态, 关闭LOG功能
+#define SHLog(...)
+#endif
+
+
+/** 判断真机*/
+#if TARGET_IPHONE_SIMULATOR
+#define SIMULATOR 1        // 模拟器
+#elif TARGET_OS_IPHONE
+#define SIMULATOR 0       // 真机
+//if (SIMULATOR == 1) { // 模拟器
+//    return;
+//}
+
+
+#endif /* YSYX_Prefix_pch */

@@ -1,0 +1,96 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - BaiduMapKit (3.0.0)
+  - DACircularProgress (2.3.1)
+  - FDFullscreenPopGesture (1.1)
+  - FDStackView (1.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - HMSegmentedControl (1.5.2)
+  - IQKeyboardManager (3.3.7)
+  - KVOController (1.0.3)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (2.3.8)
+  - MJRefresh (3.1.6)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - pop (1.0.9)
+  - RSKImageCropper (1.2.1)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SVProgressHUD (2.0.3)
+  - UMengAnalytics-NO-IDFA (3.5.17)
+  - WebViewJavascriptBridge (5.0.5)
+  - ZYQAssetPickerController (1.0.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0.4)
+  - Aspects (~> 1.4.1)
+  - BaiduMapKit
+  - DACircularProgress (~> 2.3.1)
+  - FDFullscreenPopGesture (~> 1.1)
+  - FDStackView (~> 1.0)
+  - FMDB (~> 2.6)
+  - HMSegmentedControl
+  - IQKeyboardManager (~> 3.3.6)
+  - KVOController (~> 1.0.3)
+  - Masonry (~> 0.6.2)
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 2.3.7)
+  - MJRefresh
+  - NJKWebViewProgress
+  - NJKWebViewProgress (~> 0.2.3)
+  - pop
+  - RSKImageCropper (~> 1.2.1)
+  - SDWebImage (~> 3.7.2)
+  - SVProgressHUD
+  - UMengAnalytics-NO-IDFA (~> 3.5.9)
+  - WebViewJavascriptBridge
+  - ZYQAssetPickerController (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d83b55e6cb95c6274388539c782386b56f394a6d
+  MJRefresh: 5c69f11e8bde0664e15326d2e61f61e103c6545f
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RSKImageCropper: e912419809d3a4eac47864d6fbc22f84c14879d5
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UMengAnalytics-NO-IDFA: 601dab9ffe32f9de3fa0a6116768aed18a56f8a9
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
+  ZYQAssetPickerController: e5cf51ee6c05fa06746830026c247cb9f6699e84
+
+COCOAPODS: 0.39.0
