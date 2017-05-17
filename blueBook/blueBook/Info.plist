@@ -4,6 +4,8 @@
 <dict>
 	<key>Allow Arbitrary Loads</key>
 	<true/>
+	<key>CFBundleDisplayName</key>
+	<string>日历(MVC 架构)</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict/>
